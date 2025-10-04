@@ -117,6 +117,75 @@ nav a.active {
     background: #00796b;
 }
 
+/* Info */
+.info-page {
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+
+.info-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.profile-pic {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.description h1 {
+    margin-bottom: 20px;
+    color: #004d40;
+}
+
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* Additional Info Section */
+.additional-info-section {
+    padding: 60px 10%;
+}
+
+.additional-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.side-pic {
+    width: 300px;
+    border-radius: 12px;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.additional-text {
+    flex: 1;
+}
+
+.additional-text p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
 /* Featured Gallery */
 .featured-gallery {
     padding: 60px 20px;
@@ -187,13 +256,13 @@ nav a.active {
     left:0;
     right:0;
     bottom:0;
-    background: rgba(0, 0, 0, 0.55); /* dark overlay */
+    background: rgba(0, 0, 0, 0.55);
 }
 
 .cta h2,
 .cta p,
 .cta .btn {
-    position: relative; /* keep text above overlay */
+    position: relative;
     z-index: 1;
 }
 
@@ -272,7 +341,7 @@ footer {
     }
 
     nav ul {
-        justify-content: center; /* center items when wrapped */
+        justify-content: center; 
         gap: 12px;
     }
 
@@ -313,5 +382,16 @@ footer {
 
     .cta p {
         font-size: 1rem;
+    }
+
+    .about-me,
+    .additional-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+     .description,
+    .additional-text {
+        text-align: center;
     }
 }
