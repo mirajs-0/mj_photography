@@ -171,7 +171,7 @@ nav a.active {
 
 .side-pic {
     width: 300px;
-    border-radius: 12px;
+    border-radius: 5px;
     height: auto;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -186,19 +186,43 @@ nav a.active {
     text-align: justify;
 }
 
-/* Featured Gallery */
-.featured-gallery {
+/* Featured Gallery Home Page */
+.featured-gallery-home {
     padding: 60px 20px;
     text-align: center;
     background: #f9f9f9;
 }
 
-.featured-gallery h2 {
+.featured-gallery-home h2 {
     margin-bottom: 30px;
     color: #004d40;
     font-size: 2rem;
 }
 
+.gallery-grid-home {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid-home a {
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.gallery-grid-home img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.gallery-grid-home a:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Gallery Grid --- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -206,20 +230,67 @@ nav a.active {
 }
 
 .gallery-grid a {
-    text-decoration: none;
-    color: #333;
-    transition: transform 0.3s;
+    display: block;
+    overflow: hidden;
+    height: 220px; /* Uniform height */
 }
 
 .gallery-grid img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover; /* Crop to fill container */
+    transition: transform 0.3s;
+    display: block;
+
 }
 
-.gallery-grid a:hover {
-    transform: translateY(-5px);
+.gallery-grid a:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Lightbox Overlay --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* --- Show Lightbox when Targeted --- */
+.lightbox:target {
+  display: flex;
+}
+
+/* --- Close Button --- */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  color: #ff4444;
 }
 
 /* About Section */
@@ -300,6 +371,7 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 0.9rem;
+    margin-top: 20px;
 }
 
 /* Responsive Design */
@@ -394,4 +466,14 @@ footer {
     .additional-text {
         text-align: center;
     }
+
+    .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .lightbox-close {
+    font-size: 1.5rem;
+    top: 15px;
+    right: 20px;
+  }
 }
