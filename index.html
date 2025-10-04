@@ -7,41 +7,87 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
+        <div class="header-container">
             <!-- Logo -->
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/mjlogo.png" alt="MJ Photography Logo">
-            </a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/mjlogo.png" alt="MJ Photography Logo">
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="info.html">INFO</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <!-- Header Section -->
-    <nav>
-        <ul class="navbar">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="info.html">INFO</a></li>
-            <!-- Gallery with Dropdown -->
-            <li class="dropdown"> 
-                <a href="gallery.html">GALLERY</a>
-                <ul class="dropdown-content">
-                    <li><a href="gallery.html#landscapes">Landscapes</a></li>
-                    <li><a href="gallery.html#nature">Nature</a></li>
-                    <li><a href="gallery.html#portrait">Portrait</a></li>
-                </ul>
-            </li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-    </nav>
 
     <!-- Main Body -->
-     <main>
-        <h1>Hi, I am Miraj Shrestha. </h1>
-        <p>Discover my stunning photography in landscapes, portraits, and nature.</p>
 
-     </main>
+    <!-- Intro Section -->
+    <section class="intro" style="background-image: url('images/cover.jpg');">
+        <div class="intro-overlay">
+            <div class="intro-text">
+                <h1>Hi, I’m <span class="highlight">Miraj Shrestha</span></h1>
+                <h2>Professional Photographer • Storyteller • Dreamer</h2>
+                <p>
+                    Through my lens, I capture fleeting moments and turn them into timeless stories. 
+                    From breathtaking landscapes to intimate portraits, I strive to reveal beauty in every frame.
+                </p>
+                <div class="intro-buttons">
+                    <a href="gallery.html" class="btn primary">Explore My Work</a>
+                    <a href="contact.html" class="btn secondary">Book a Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-     <!-- Footer -->
+    <!-- Featured Gallery Preview -->
+    <section class="featured-gallery">
+        <h2>Featured Works</h2>
+        <div class="gallery-grid">
+            <a href="gallery.html#landscapes">
+                <img src="images/landscape/landscape2.jpg" alt="Landscape Photography">
+                <p>Landscapes</p>
+            </a>
+            <a href="gallery.html#nature">
+                <img src="images/nature/nature5.jpg" alt="Nature Photography">
+                <p>Nature</p>
+            </a>
+            <a href="gallery.html#portrait">
+                <img src="images/portrait/DSC_0342.jpg" alt="Portrait Photography">
+                <p>Portraits</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I’m a passionate photographer with a love for capturing the beauty of our world. 
+            Whether it’s a serene landscape, the details of nature, or the emotions in a portrait, 
+            my goal is to create timeless images that tell a story.
+        </p>
+        <a href="info.html" class="btn">Learn More</a>
+    </section>
+
+    <!-- Contact -->
+    <section class="cta">
+        <h2>Let’s Work Together</h2>
+        <p>Looking for professional photography for your special moments or projects?</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+    </section>
+d
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 MJ Photography. All rights reserved.</p>
     </footer>
