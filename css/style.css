@@ -13,6 +13,10 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Header */
 header {
   background-color: #004d40;
@@ -506,6 +510,85 @@ footer .social-links a:hover {
   transform: scale(1.2);
 }
 
+/* Contact Page */
+
+.contact {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 45%;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-form h2,
+.contact-info h2 {
+  margin-bottom: 20px;
+  color: #004d40;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #009688;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #009688;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #00796b;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-info i {
+  color: #009688;
+  margin-right: 10px;
+}
+
+
 /* Responsive Design */
 
 @media (max-width: 992px) {
@@ -549,6 +632,11 @@ footer .social-links a:hover {
   .package-card .price {
     font-size: 1.1rem;
   }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
 }
 
 /* Mobile devices */
@@ -561,6 +649,19 @@ footer .social-links a:hover {
     height: 60px;
   }
 
+  .header-container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .logo {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
   nav ul {
     justify-content: center;
     gap: 12px;
@@ -677,5 +778,14 @@ footer .social-links a:hover {
 
   .package-card .price {
     font-size: 1.1rem;
+  }
+  .contact-form,
+  .contact-info {
+    padding: 20px;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 1.4rem;
   }
 }
