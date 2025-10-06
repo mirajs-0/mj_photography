@@ -506,7 +506,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  color: #80cbc4; /* teal accent */
+  color: #80cbc4; 
   transform: scale(1.2);
 }
 
